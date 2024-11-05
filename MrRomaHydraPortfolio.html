@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/hydra-synth"></script>
+    <title>Projects from Hydra</title>
+</head>
+
+<body>
+    <header>
+        <h1>Projects from Hydra</h1>
+        <h2>by Omar Vidal</h2>
+    </header>
+
+    <div class="content">
+        <canvas id="hydraCanvas" width="420" height="420"></canvas>
+        <script>
+            var hydra = new Hydra({
+                canvas: document.getElementById("hydraCanvas"),
+                detectAudio: false,
+                enableStreamCapture: false
+            });
+            osc(20, 0.2, 1.5)
+                .modulateScrollX(noise(2, 0.3), 0.5)
+                .kaleid(4, 0.3)
+                .out();
+        </script>
+ </div>
+
+        <h2>Dibujos modulados con Hydra</h2>
+
+        <div>
+            <video id="video0" autoplay muted loop>
+                <source src="proyectosdehydra/ChessMaster.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="video1" autoplay muted loop>
+                <source src="proyectosdehydra/Performance.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+
+        <div class="image-grid">
+            <div><img src="imagenes/image1.png" alt="Imagen 1"></div>
+            <div><img src="imagenes/image2.png" alt="Imagen 2"></div>
+            <div><img src="imagenes/image3.png" alt="Imagen 3"></div>
+            <div><img src="imagenes/image4.png" alt="Imagen 4"></div>
+            <div><img src="imagenes/image5.png" alt="Imagen 5"></div>
+            <div><img src="imagenes/image6.png" alt="Imagen 6"></div>
+            <div><img src="imagenes/image7.png" alt="Imagen 7"></div>
+            <div><img src="imagenes/image8.png" alt="Imagen 8"></div>
+            <div><img src="imagenes/image9.png" alt="Imagen 9"></div>
+  
+        </div>
+    </div>
+</body>
+</html>
